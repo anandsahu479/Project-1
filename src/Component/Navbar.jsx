@@ -6,7 +6,7 @@ import { MdMenu } from "react-icons/md";
 const Navbar = () => {
   const[x, Setx]= useState(false)
   return (
-    <div className='flex justify-between items-center gap-5 bg-green-600 h-[50px] relative p-3'>
+    <div className='flex justify-between items-center gap-5 bg-green-600 w-full h-[50px] relative p-3 px-8 bg-gradient-to-r from-red-500 via-green-400 to-blue-800'>
       <h1 className='font-bold text-white text-xl'>React Practice</h1>
       <ul className='md:flex hidden gap-6'>
         <li><Link to={'/'}>Home</Link></li>
@@ -14,7 +14,7 @@ const Navbar = () => {
         <li><Link to={'/Expense'}>Expense</Link></li>
         <li><Link to={'/Todo List'}>Todo</Link></li>
       </ul>
-      { x && <ul className='md:hidden block absolute bg-blue-600 left-0 w-full top-[100%]'>
+      { x && <ul className='md:hidden block absolute bg-blue-600 left-0 w-full top-[100%] z-50 px-7'>
          <li className='text-center px-4 py-2 border-b-2'><Link to={'/'}>Home</Link></li>
          <li className='text-center px-4 py-2 border-b-2'><Link to={'/About'}>About</Link></li>
          <li className='text-center px-4 py-2 border-b-2'><Link to={'/Expense'}>Expense</Link></li>
